@@ -6,10 +6,7 @@
 
 ---
 
-## 🔍 Project Metadata (SEO)
-- **Description**: A high-performance AI agent skill library and workflow engine, featuring 16+ expert modules for document engineering, frontend design, and automation.
-- **Keywords**: AI Agent, Claude Code, Expert System, Workflow Engine, Automation, PDF Processing, Antigravity, LLM Ops.
-- **Category**: Developer Tools / AI Infrastructure.
+> **Antigravity Skill Engine (ASE)** is a high-performance **AI agent skill library** and **workflow engine** built on AI-native cognitive architecture. It transforms a single **LLM** into an industrial-grade **expert system** with 16 tracks of specialized expertise, providing robust solutions for **document engineering**, **frontend design**, and **workflow automation**.
 
 ## 🏛️ Core Philosophy: The Trinity
 
