@@ -1,0 +1,159 @@
+{
+    "version": "1.1.1",
+    "skills": [
+        {
+            "id": "algorithmic-art",
+            "intent_keywords": [
+                "algorithmic art",
+                "algorithmic",
+                "art"
+            ],
+            "skill_path": ".agent/skills/algorithmic-art/SKILL.md",
+            "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations."
+        },
+        {
+            "id": "brand-guidelines",
+            "intent_keywords": [
+                "brand guidelines",
+                "brand",
+                "guidelines"
+            ],
+            "skill_path": ".agent/skills/brand-guidelines/SKILL.md",
+            "description": "Applies The Agent's official brand colors and typography to any sort of artifact that may benefit from having The Agent's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply."
+        },
+        {
+            "id": "canvas-design",
+            "intent_keywords": [
+                "canvas design",
+                "canvas",
+                "design"
+            ],
+            "skill_path": ".agent/skills/canvas-design/SKILL.md",
+            "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations."
+        },
+        {
+            "id": "doc-coauthoring",
+            "intent_keywords": [
+                "doc coauthoring",
+                "doc",
+                "coauthoring"
+            ],
+            "skill_path": ".agent/skills/doc-coauthoring/SKILL.md",
+            "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks."
+        },
+        {
+            "id": "docx",
+            "intent_keywords": [
+                "docx"
+            ],
+            "skill_path": ".agent/skills/docx/SKILL.md",
+            "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When The Agent needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks"
+        },
+        {
+            "id": "frontend-design",
+            "intent_keywords": [
+                "frontend design",
+                "frontend",
+                "design"
+            ],
+            "skill_path": ".agent/skills/frontend-design/SKILL.md",
+            "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics."
+        },
+        {
+            "id": "internal-comms",
+            "intent_keywords": [
+                "internal comms",
+                "internal",
+                "comms"
+            ],
+            "skill_path": ".agent/skills/internal-comms/SKILL.md",
+            "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. The Agent should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.)."
+        },
+        {
+            "id": "mcp-builder",
+            "intent_keywords": [
+                "mcp builder",
+                "mcp",
+                "builder"
+            ],
+            "skill_path": ".agent/skills/mcp-builder/SKILL.md",
+            "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
+        },
+        {
+            "id": "pdf",
+            "intent_keywords": [
+                "pdf"
+            ],
+            "skill_path": ".agent/skills/pdf/SKILL.md",
+            "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When The Agent needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale."
+        },
+        {
+            "id": "pptx",
+            "intent_keywords": [
+                "pptx"
+            ],
+            "skill_path": ".agent/skills/pptx/SKILL.md",
+            "description": "Presentation creation, editing, and analysis. When The Agent needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks"
+        },
+        {
+            "id": "skill-creator",
+            "intent_keywords": [
+                "skill creator",
+                "skill",
+                "creator"
+            ],
+            "skill_path": ".agent/skills/skill-creator/SKILL.md",
+            "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends The Agent's capabilities with specialized knowledge, workflows, or tool integrations."
+        },
+        {
+            "id": "slack-gif-creator",
+            "intent_keywords": [
+                "slack gif creator",
+                "slack",
+                "gif",
+                "creator"
+            ],
+            "skill_path": ".agent/skills/slack-gif-creator/SKILL.md",
+            "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack."
+        },
+        {
+            "id": "theme-factory",
+            "intent_keywords": [
+                "theme factory",
+                "theme",
+                "factory"
+            ],
+            "skill_path": ".agent/skills/theme-factory/SKILL.md",
+            "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly."
+        },
+        {
+            "id": "web-artifacts-builder",
+            "intent_keywords": [
+                "web artifacts builder",
+                "web",
+                "artifacts",
+                "builder"
+            ],
+            "skill_path": ".agent/skills/web-artifacts-builder/SKILL.md",
+            "description": "Suite of tools for creating elaborate, multi-component the agent.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts."
+        },
+        {
+            "id": "webapp-testing",
+            "intent_keywords": [
+                "webapp testing",
+                "webapp",
+                "testing"
+            ],
+            "skill_path": ".agent/skills/webapp-testing/SKILL.md",
+            "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs."
+        },
+        {
+            "id": "xlsx",
+            "intent_keywords": [
+                "xlsx"
+            ],
+            "skill_path": ".agent/skills/xlsx/SKILL.md",
+            "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When The Agent needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas"
+        }
+    ]
+}
