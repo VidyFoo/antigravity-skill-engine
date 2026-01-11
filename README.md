@@ -1,12 +1,12 @@
-# ⚡ Antigravity Skill Engine (ASE)
+# ⚡ Antigravity Skills Engine (ASE)
 
-> **Antigravity Skill Engine (ASE)** is an expert-level capability engine built on AI-native cognitive architecture. It transforms a single LLM into an industrial-grade collaborative system with 16 tracks of specialized expertise.
+> **Antigravity Skills Engine (ASE)** is a high-performance **AI agent skills library** and **workflow engine** built on AI-native cognitive architecture. It transforms a single **LLM** into an industrial-grade **expert system** with 16 tracks of specialized expertise, providing robust solutions for **document engineering**, **frontend design**, and **workflow automation**.
 
 **English Version** | [中文版](./README_zh.md)
 
 ---
 
-> **Antigravity Skill Engine (ASE)** is a high-performance **AI agent skill library** and **workflow engine** built on AI-native cognitive architecture. It transforms a single **LLM** into an industrial-grade **expert system** with 16 tracks of specialized expertise, providing robust solutions for **document engineering**, **frontend design**, and **workflow automation**.
+> **Antigravity Skills Engine (ASE)** is the ultimate **skills library** for AI agents, providing a comprehensive collection of **Claude Skills** and industrial-grade workflows. It enables seamless **expert execution** for **PDF processing**, **Excel automation**, and **full-stack development**, ensuring your AI agent performs with unmatched precision.
 
 ## 🏛️ Core Philosophy: The Trinity
 

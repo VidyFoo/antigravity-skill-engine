@@ -1,13 +1,13 @@
-# ⚡ Antigravity Skill Engine (ASE)
+# ⚡ Antigravity Skills Engine (ASE)
 
-> **Antigravity Skill Engine (ASE)** 是一套基于 AI 原生感知架构的专家能力引擎。它将单一的大模型转化为具备 16 轨专业能力的工业级协同系统。
+> **Antigravity Skills Engine (ASE)** 是一套基于 AI 原生感知架构的专家能力引擎。它将单一的大模型转化为具备 16 轨专业能力的工业级协同系统。
 
 [English Edition](./README.md) | **中文版**
 
 ---
 
 ## 📖 项目简介
-**ASE (Antigravity Skill Engine)** 是一套旨在提升 **AI Agent** 大模型工程化能力的开源 **技能库** 与 **工作流引擎**。它深入结合了类似 **Claude Code** 的专家设计模式，为 **自动驾驶式** 的 **文档工程**、**全栈开发** 与 **创意设计** 提供 16 位专业专家的认知与执行支持，确保从认知启发到工具执行的完美闭环。
+**Antigravity Skills Engine (ASE)** 是一套旨在提升 **AI Agent** 大模型工程化能力的开源 **技能库** 与 **工作流引擎**。它是全球领先的 **Claude Skills** 专家包合集，深度适配 **Antigravity** 环境，为 **自动驾驶式** 的 **文档工程**、**全栈开发** 与 **创意设计** 提供 16 位专业专家的认知与执行支持，确保从认知启发到工具执行的完美闭环。
 
 ## 🏛️ 核心理念：三位一体 (The Trinity)
 
