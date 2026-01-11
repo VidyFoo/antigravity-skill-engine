@@ -8,6 +8,31 @@
 
 > **Antigravity Skills Engine (ASE)** is the ultimate **skills library** for AI agents, providing a comprehensive collection of **Claude Skills** and industrial-grade workflows. It enables seamless **expert execution** for **PDF processing**, **Excel automation**, and **full-stack development**, ensuring your AI agent performs with unmatched precision.
 
+## 📂 Project Structure
+
+ASE follows a modular and self-contained structure to ensure experts are easy to manage and distribute:
+
+```text
+.agent/
+├── skills/                  # Expert Library (The "Brains")
+│   ├── registry.json        # Global skill index & routing rules
+│   └── [skill-name]/        # Self-contained expert package
+│       ├── SKILL.md         # Soul: Logic, decision trees, and context
+│       ├── scripts/         # Bone: Deterministic engineering tools
+│       └── examples/        # Flesh: Best practices & reuse patterns
+└── workflows/               # Orchestration Layer (The "Nervous System")
+    └── ase.md               # The /ase super-workflow & router
+```
+
+## 🛠️ Core Functions & Usage
+
+The primary way to interact with the engine is via the **Antigravity** integrated environment:
+
+### **Summoning the Council**: `@/ase`
+Typing `@/ase` in the Antigravity command bar activates the **Discovery Mode**:
+- **Expert Inspection**: ASE scans the `.agent/skills` directory and displays a real-time categorized roster of available experts.
+- **Intent Mapping**: If you follow the command with a task (e.g., `@/ase analyze this PDF`), the engine uses **implicit semantic awareness** to wake up the most relevant expert and inject their knowledge directly into the active session.
+
 ## 🏛️ Core Philosophy: The Trinity
 
 ASE moves away from fragmented tool-calling in favor of a "Trinity" asset structure designed for AI cognition:
