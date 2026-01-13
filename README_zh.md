@@ -1,81 +1,66 @@
 # ⚡ Antigravity Skills Engine (ASE)
 
-> **Antigravity Skills Engine (ASE)** 是一套基于 AI 原生感知架构的专家能力引擎。它将单一的大模型转化为具备 16 轨专业能力的工业级协同系统。
+> **Antigravity Skills Engine (ASE)** 是一个高性能的 **AI Agent 技能库** 与 **工作流引擎**。它通过动态的 **专家技能注册表**，将单个 LLM 转化为工业级的 **专家系统**。它是让您的 AI Agent 拥有“职业技能”的中枢神经系统。
 
-[English Edition](./README.md) | **中文版**
+**版本**: 2.1.0 (Slim) | **状态**: 生产就绪 (Production Ready)
 
 ---
 
-## 📖 项目简介
-**Antigravity Skills Engine (ASE)** 是一套旨在提升 **AI Agent** 大模型工程化能力的开源 **技能库** 与 **工作流引擎**。它是全球领先的 **Claude Skills** 专家包合集，深度适配 **Antigravity** 环境，为 **自动驾驶式** 的 **文档工程**、**全栈开发** 与 **创意设计** 提供 16 位专业专家的认知与执行支持，确保从认知启发到工具执行的完美闭环。
+## 🏛️ 核心架构：Registry V2
+
+ASE 2.1 超越了简单的 Tool Calling。它实现了一个基于 Map 结构的 **注册表架构 (Registry Architecture)**，将技能科学地划分为 5 大战略领域。`/ase` 能够动态读取此注册表，实时感知并调用自身能力。
+
+### 🗂️ 五大专家领域 (The 5 Domains)
+
+| 领域 | 核心关注 | 关键技能 |
+| :--- | :--- | :--- |
+| **🎨 视觉与设计** | UI/UX, 素材资产 | `visual-design-system` (统一引擎), `brand-guidelines` |
+| **📄 文档工程** | Office 格式处理 | `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring` |
+| **⚙️ 全栈开发** | 代码与架构 | `system-architecture-design`, `backend-dev-guidelines`, `frontend-dev-guidelines`, `mcp-builder` |
+| **🧠 分析与审查** | 质检与洞察 | **`intelligent-code-review`** (New!), `systematic-debugging`, `meeting-insights-analyzer` |
+| **🚀 系统演进** | 元技能 (Meta) | `skill-creator`, `product-requirements-mastery`, `internal-comms` |
 
 ## 📂 项目结构
 
-ASE 采用模块化且自包含的结构，确保专家技能易于管理与分发：
-
 ```text
 .agent/
-├── skills/                  # 专家库 (Soul)
-│   ├── registry.json        # 全局技能索引与路由规则
-│   └── [skill-name]/        # 自包含的专家包
-│       ├── SKILL.md         # 灵魂 (Soul): 逻辑、决策树与上下文
-│       ├── scripts/         # 骨骼 (Bone): 确定性的工程脚本工具
-│       └── examples/        # 血肉 (Flesh): 最佳实践与复用案例
-└── workflows/               # 调度层 (Nervous System)
-    └── ase.md               # /ase 超级工作流与路由器
+├── skills/
+│   ├── registry.json             #单一真理来源 (Map-based Registry)
+│   ├── intelligent-code-review/  # 多角色技能示例
+│   │   ├── SKILL.md              # 路由与核心逻辑
+│   │   └── resources/            # 外部“脑容量” (检查单, 模板)
+│   │       └── personas/         # "Silent Hunter", "Type Architect" 等角色
+│   └── ...
+└── workflows/
+    └── ase.md                    # /ase 超级工作流 (动态路由器)
 ```
 
-## 🛠️ 核心功能与使用
+## 🛠️ 使用指南
 
-与 ASE 引擎交互的主要方式是通过 **Antigravity** 集成环境：
+### 召唤委员会：`/ase`
 
-### **召唤专家委员会**: `@/ase`
-在 Antigravity 命令行输入 `@/ase` 将激活 **自省模式**：
-- **专家巡检**：ASE 扫描 `.agent/skills` 目录，并实时展示当前的专家分类名录。
-- **意图映射**：若在指令后跟随具体任务（例如 `@/ase 分析此 PDF`），引擎将利用**隐式语义感知**技术，自动唤醒最匹配的专家，并将其专业知识直接注入当前会话。
+在对话中输入 `/ase`。
+引擎将进入 **发现模式 (Discovery Mode)**，扫描 `registry.json` 并向您展示当前的专家矩阵。
 
-## 🏛️ 核心理念：三位一体 (The Trinity)
+然后，您可以使用自然语言下达指令：
+> *"Review my code for error handling bugs."*
+> (激活 `intelligent-code-review` -> `Silent Hunter` 角色)
 
-ASE 摒弃了传统的碎片化工具调用，转而采用一种更符合 AI 认知的“三位一体”资产结构：
+> *"Design a premium glassmorphism landing page."*
+> (激活 `visual-design-system` -> `Premium Mode` 模式)
 
-*   **灵魂 (Soul)**: 位于 `SKILL.md`，承载专家的背景、逻辑与决策树。
-*   **骨骼 (Bone)**: 位于 `scripts/`，提供原子化、高性能的工程工具。
-*   **血肉 (Flesh)**: 位于 `examples/`，提供可供 AI 学习与复用的最佳实践。
+## 💎 ASE 2.1 关键特性
 
-## 🚀 快速启动
+*   **精简统一 (Slim & Unified)**: 将分散的设计技能合并为 `visual-design-system`；移除了 `slack-gif`, `video-downloader` 等非核心工具。
+*   **协议优先 (Protocol-First)**: 像 `intelligent-code-review` 这样的技能强制执行严格的**执行协议**（例如：“必须在审查前读取检查清单”），拒绝幻觉。
+*   **资源挂载 (Resources > Context)**: 重型知识（检查单、原理）被卸载到 `resources/` 文件中，仅在需要时加载，节省 Token 并保持上下文清晰。
 
-### 1. 注入引擎
-将 `.agent/` 目录合并到您的项目根目录。
+## 🚀 创建新技能
 
-### 2. 唤醒专家
-在大模型环境中，输入：
-```bash
-/ase
-```
-此时，系统会启动“动态自省”，为您展示当前的专家名录并进入意图匹配模式。
-
-## 专家阵容 (Current Experts)
-
-目前系统预置了以下四个领域的 16 位顶级专家：
-
-*   🎨 **视觉与设计**: `frontend-design`, `canvas-design`, `algorithmic-art`, `theme-factory`
-*   📄 **重型文档工程**: `pdf`, `docx`, `xlsx`, `pptx`, `doc-coauthoring`
-*   ⚙️ **全栈开发与工具**: `webapp-testing`, `mcp-builder`, `web-artifacts-builder`
-*   🚀 **系统演进与管理**: `skill-creator`, `internal-comms`, `brand-guidelines`, `slack-gif-creator`
-
-## 💎 特色功能
-
-- **隐式语义感知**: 针对 Antigravity 知探架构深度优化，无需精确关键词即可精准映射专家。
-- **环境安全适配**: 所有工具均在 Antigravity 容器内经过完美执行验证。
-- **专家资产回流**: 鼓励开发过程中的脚本资产沉淀至专家库。
-
-## 📚 参考来源与声明
-
-本项目中的专家能力均深度参考并转换自 **Claude** 系列开源库。我们针对 **Antigravity** 环境进行了全量的路由重写、路径闭合修正及工具链适配，确保“完美执行”。
-
-## 📜 开源协议
-
-本项目采用 [MIT License](LICENSE)。
+想要添加一位新专家？
+1.  召唤 **Skill Creator**：`Create a new skill for [Topic]`。
+2.  它会自动生成标准的 `SKILL.md` 并注册到 `registry.json`。
+3.  新技能将即刻通过 `/ase` 可用。
 
 ---
-*Antigravity: Perfecting expert execution with precision.*
+*Antigravity: Speeding up your workflow with precision.*

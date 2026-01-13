@@ -1,85 +1,66 @@
 # ⚡ Antigravity Skills Engine (ASE)
 
-> **Antigravity Skills Engine (ASE)** is a high-performance **AI agent skills library** and **workflow engine** built on AI-native cognitive architecture. It transforms a single **LLM** into an industrial-grade **expert system** with 16 tracks of specialized expertise, providing robust solutions for **document engineering**, **frontend design**, and **workflow automation**.
+> **Antigravity Skills Engine (ASE)** is a high-performance **AI agent skills library** and **workflow engine**. It transforms a single **LLM** into an industrial-grade **expert system** through a dynamic registry of specialized skills. It acts as the "Central Nervous System" for your AI Agent.
 
-**English Version** | [中文版](./README_zh.md)
+**Version**: 2.1.0 (Slim) | **Status**: Production Ready
 
 ---
 
-> **Antigravity Skills Engine (ASE)** is the ultimate **skills library** for AI agents, providing a comprehensive collection of **Claude Skills** and industrial-grade workflows. It enables seamless **expert execution** for **PDF processing**, **Excel automation**, and **full-stack development**, ensuring your AI agent performs with unmatched precision.
+## 🏛️ Core Architecture: Registry V2
+
+ASE 2.1 moves beyond simple tool calling. It implements a **Map-based Registry Architecture** that categorizes skills into 5 strategic domains. The `/ase` agent dynamically reads this registry to understand its capabilities.
+
+### 🗂️ The 5 Domains of Expertise
+
+| Domain | Focus | Key Skills |
+| :--- | :--- | :--- |
+| **🎨 Visual & Design** | UI/UX, Assets | `visual-design-system` (Unified), `brand-guidelines` |
+| **📄 Document Engineering** | Office Formats | `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring` |
+| **⚙️ Fullstack Dev** | Code & Architecture | `system-architecture-design`, `backend-dev-guidelines`, `frontend-dev-guidelines`, `mcp-builder` |
+| **🧠 Analysis & Review** | QA & Insights | **`intelligent-code-review`** (New!), `systematic-debugging`, `meeting-insights-analyzer` |
+| **🚀 System Evolution** | Meta-Skills | `skill-creator`, `product-requirements-mastery`, `internal-comms` |
 
 ## 📂 Project Structure
 
-ASE follows a modular and self-contained structure to ensure experts are easy to manage and distribute:
-
 ```text
 .agent/
-├── skills/                  # Expert Library (The "Brains")
-│   ├── registry.json        # Global skill index & routing rules
-│   └── [skill-name]/        # Self-contained expert package
-│       ├── SKILL.md         # Soul: Logic, decision trees, and context
-│       ├── scripts/         # Bone: Deterministic engineering tools
-│       └── examples/        # Flesh: Best practices & reuse patterns
-└── workflows/               # Orchestration Layer (The "Nervous System")
-    └── ase.md               # The /ase super-workflow & router
+├── skills/
+│   ├── registry.json             # Single Source of Truth (Map-based)
+│   ├── intelligent-code-review/  # Example Multi-Persona Skill
+│   │   ├── SKILL.md              # Routing Logic
+│   │   └── resources/            # External Knowledge (Checklists, Templates)
+│   │       └── personas/         # "Silent Hunter", "Type Architect", etc.
+│   └── ...
+└── workflows/
+    └── ase.md                    # The /ase super-workflow (Dynamic Router)
 ```
 
-## 🛠️ Core Functions & Usage
+## 🛠️ Usage
 
-The primary way to interact with the engine is via the **Antigravity** integrated environment:
+### Summoning the Council: `/ase`
 
-### **Summoning the Council**: `@/ase`
-Typing `@/ase` in the Antigravity command bar activates the **Discovery Mode**:
-- **Expert Inspection**: ASE scans the `.agent/skills` directory and displays a real-time categorized roster of available experts.
-- **Intent Mapping**: If you follow the command with a task (e.g., `@/ase analyze this PDF`), the engine uses **implicit semantic awareness** to wake up the most relevant expert and inject their knowledge directly into the active session.
+Just type `/ase` in your chat.
+The engine will enter **Discovery Mode**, scanning `registry.json` and presenting you with the Expert Matrix.
 
-## 🏛️ Core Philosophy: The Trinity
+Then, ask naturally:
+> *"Review my code for error handling bugs."*
+> (Activates `intelligent-code-review` -> `Silent Hunter` persona)
 
-ASE moves away from fragmented tool-calling in favor of a "Trinity" asset structure designed for AI cognition:
+> *"Design a premium glassmorphism landing page."*
+> (Activates `visual-design-system` -> `Premium Mode`)
 
-*   **Soul**: Located in `SKILL.md`, carrying the background, logic, and decision trees of the expert.
-*   **Bone**: Located in `scripts/`, providing atomized, high-performance engineering tools.
-*   **Flesh**: Located in `examples/`, providing best practices for the AI to learn and reuse.
+## 💎 Key Features 2.1
 
-## 🚀 Quick Start
+*   **Slim & Unified**: Merged fragmented design skills into `visual-design-system`; removed bloatware (`slack-gif`, `video-downloader`).
+*   **Protocol-First**: Skills like `intelligent-code-review` enforce strict execution protocols (e.g., "Must read checklist before reviewing").
+*   **Resources > Context**: Heavy knowledge is offloaded to `resources/` files to save context window tokens until needed.
 
-### 1. Inject the Engine
-Merge the `.agent/` directory into your project root.
+## 🚀 Creating New Skills
 
-### 2. Summon an Expert
-In an LLM environment with workflow support, type:
-```bash
-/ase
-```
-The system will start "Dynamic Introspection," displaying the current expert roster and entering intent-matching mode.
-
-## Expert Roster (16/16)
-
-Currently pre-configured with 16 top-tier experts across four domains:
-
-*   🎨 **Visuals & Design**: `frontend-design`, `canvas-design`, `algorithmic-art`, `theme-factory`
-*   📄 **Heavy Document Engineering**: `pdf`, `docx`, `xlsx`, `pptx`, `doc-coauthoring`
-*   ⚙️ **Full-stack & Tools**: `webapp-testing`, `mcp-builder`, `web-artifacts-builder`
-*   🚀 **Evolution & Systems**: `skill-creator`, `internal-comms`, `brand-guidelines`, `slack-gif-creator`
-
-## 💎 Key Features
-
-- **Implicit Semantic Awareness**: Deeply optimized for Antigravity's cognitive architecture—maps experts accurately without exact keywords.
-- **Environment-Locked Safety**: All tools are validated for "Perfect Execution" within the Antigravity container.
-- **Asset Feedback Loop**: Encourages the persistence of script assets into the expert library during development.
-
-## 📚 Attribution & Statement
-
-The expert capabilities in this project are deeply inspired by and converted from the **Claude** series of open-source libraries (e.g., `Claude Engineer`, `Claude-Architect`).
-
-We have performed extensive adaptation for the **Antigravity** environment to ensure **Perfect Execution**:
-- **Router Rewrite**: Rebuilt intent mapping for Antigravity's specific sub-agent triggers.
-- **Path Verification**: Fixed all file system and tool call paths for seamless local execution.
-- **Tool Integration**: Native support for PythonRecalc, Playwright automation, and various document engines.
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
+Want to add a new expert?
+1.  Summon the **Skill Creator**: `Create a new skill for [Topic]`.
+2.  It will generate the `SKILL.md` and register it in `registry.json` automatically.
+3.  The new skill is instantly available via `/ase`.
 
 ---
-*Antigravity: Perfecting expert execution with precision.*
+*Antigravity: Speeding up your workflow with precision.*
