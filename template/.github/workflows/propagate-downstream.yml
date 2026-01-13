@@ -1,0 +1,29 @@
+name: propagate-downstream
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  propagate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Propagate
+        env:
+          TEMPLATE_SYNC_PAT: ${{ secrets.TEMPLATE_SYNC_PAT }}
+          GH_TOKEN: ${{ secrets.TEMPLATE_SYNC_PAT }}
+          PROPAGATE_CONCURRENCY: 3
+        run: node scaffold/propagate.mjs

@@ -1,0 +1,58 @@
+name: sync-core
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add core upstream
+        run: |
+          git remote add core-upstream https://github.com/VidyFoo/antigravity-skill-engine.git || true
+          git fetch core-upstream
+
+      - name: Sync core subtree
+        id: sync
+        run: |
+          set -e
+          if git subtree pull --prefix=core core-upstream/main --squash; then
+            echo "status=success" >> $GITHUB_OUTPUT
+          else
+            echo "status=failed" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit changes
+        if: steps.sync.outputs.status == 'success'
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "template-bot"
+            git config user.email "template-bot@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: sync core subtree"
+            git push origin HEAD:main
+          fi
+
+      - name: Create PR on failure
+        if: steps.sync.outputs.status == 'failed'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="sync-core-$(date +%Y%m%d%H%M%S)"
+          git checkout -b "$branch"
+          git subtree pull --prefix=core core-upstream/main --squash || true
+          git add -A
+          git commit -m "chore: sync core subtree (manual)" || true
+          git push origin HEAD:"$branch"
+          gh pr create --title "Sync core subtree" --body "Automated sync failed; please resolve conflicts." --base main --head "$branch"
