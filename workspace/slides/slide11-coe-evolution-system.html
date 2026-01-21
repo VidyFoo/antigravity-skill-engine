@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="v2-core.css">
+    <style>
+        .compact-section {
+            display: flex;
+            gap: 10pt;
+            margin-top: 5pt;
+        }
+
+        .compact-card {
+            flex: 1;
+            background: #FFF;
+            padding: 10pt;
+            border-radius: 4pt;
+            border: 1pt solid #EEE;
+        }
+
+        .point-title {
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 11pt;
+            margin-bottom: 4pt;
+        }
+
+        .point-content {
+            font-size: 9pt;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .evo-loop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-dark);
+            padding: 10pt;
+            border-radius: 4pt;
+            margin-top: 10pt;
+        }
+
+        .evo-step {
+            flex: 1;
+            color: #FFF;
+            font-size: 8.5pt;
+            text-align: center;
+            position: relative;
+            padding: 0 5pt;
+        }
+
+        .evo-step:not(:last-child):after {
+            content: '→';
+            position: absolute;
+            right: -5pt;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .evo-step.accent {
+            color: var(--accent);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="light">
+    <div class="accent-bar"></div>
+    <div class="slide-padding">
+        <h1 class="slide-title">配套举措：城市实践与 COE 协同进化</h1>
+
+        <!-- COE 来源与定位 -->
+        <div class="compact-section">
+            <div class="compact-card" style="border-left: 4pt solid var(--accent);">
+                <p class="point-title">COE 核心定义</p>
+                <p class="point-content">来自城市实践的<b>后验总结</b>，而非总部先验设计。总部关注结果与红线，接受路径差异。</p>
+            </div>
+            <div class="compact-card" style="border-left: 4pt solid var(--bg-dark);">
+                <p class="point-title">防反噬 3 条边界</p>
+                <p class="point-content">① 信号指标 ≠ KPI；② 总部信号 ≠ 强制使用；③ COE 只能沉淀不能反压。</p>
+            </div>
+        </div>
+
+        <!-- 进化型管理系统闭环 -->
+        <div class="card" style="margin-top: 15pt; border: none; background: transparent; padding: 0;">
+            <p class="card-title" style="font-size: 13pt; margin-bottom: 5pt;">终极逻辑闭环：进化型管理系统</p>
+            <div class="evo-loop">
+                <div class="evo-step">
+                    <p>1. 定结果/红线</p>
+                </div>
+                <div class="evo-step">
+                    <p>2. 自选路径/信号</p>
+                </div>
+                <div class="evo-step">
+                    <p>3. 多路径跑结果</p>
+                </div>
+                <div class="evo-step accent">
+                    <p>4. 萃取有效 COE</p>
+                </div>
+                <div class="evo-step">
+                    <p>5. 可选工具反哺</p>
+                </div>
+                <div class="evo-step">
+                    <p>6. 自由组合进化</p>
+                </div>
+            </div>
+        </div>
+
+        <p style="margin-top: 15pt; font-size: 10.5pt; text-align: center; color: var(--text-light);">
+            真正有价值的方法论，是<b>进化</b>出来的，而不是<b>管理</b>出来的。
+        </p>
+    </div>
+</body>
+
+</html>
