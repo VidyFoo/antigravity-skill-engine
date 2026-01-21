@@ -1,279 +1,126 @@
 {
-    "version": "2.1.0",
-    "updated_at": "2026-01-13",
+    "version": "3.2.0",
+    "updated_at": "2026-01-21",
     "categories": {
-        "visual_design": "🎨 Visual & Design",
-        "document_engineering": "📄 Document Engineering",
-        "fullstack_dev": "⚙️ Fullstack Development",
-        "system_evolution": "🚀 System Evolution",
-        "analysis_review": "🧠 Analysis & Review"
+        "1-dev": "DEV (开发域)",
+        "2-audit": "AUDIT (审计域)",
+        "3-sys": "SYS (系统域)",
+        "4-tools": "TOOLS (工具域)",
+        "external": "EXTERNAL (外部依赖)"
     },
     "skills": {
-        "visual-design-system": {
-            "category": "visual_design",
-            "description": "Unified Design Engine. Supports Standard (Tailwind) and Premium (Glassmorphism/Motion) modes.",
-            "intent_keywords": [
-                "ui",
-                "ux",
-                "design",
-                "glassmorphism",
-                "tailwind",
-                "css"
-            ],
-            "skill_path": ".agent/skills/visual-design-system/SKILL.md",
-            "required_resources": [
-                ".agent/skills/visual-design-system/resources/glass-components.md",
-                ".agent/skills/visual-design-system/resources/premium-palettes.md"
-            ]
+        "1.1": {
+            "id": "architecting",
+            "name": "1.1 Architecting",
+            "category": "1-dev",
+            "description": "Architects new features through the full lifecycle. Use when designing, planning, implementing, or extending features. Triggers on 'new feature', 'design', 'plan', 'implement', 'architect', 'prd', 'spec'.",
+            "skill_path": ".agent/skills/1-dev/architecting/SKILL.md"
         },
-        "brand-guidelines": {
-            "category": "visual_design",
-            "description": "Apply official brand colors and typography.",
-            "intent_keywords": [
-                "brand",
-                "typography",
-                "style guide"
-            ],
-            "skill_path": ".agent/skills/brand-guidelines/SKILL.md"
+        "1.2": {
+            "id": "fullstack-guide",
+            "name": "1.2 Fullstack Guide",
+            "category": "1-dev",
+            "description": "全栈开发规范百科全书 (React/TS/Node/Supabase). Modern patterns including Suspense, lazy loading, useSuspenseQuery, file organization with features directory, performance optimization, and TypeScript best practices. Use when creating components, pages, features, fetching data, styling, routing, or working with frontend/backend code.",
+            "skill_path": ".agent/skills/1-dev/fullstack-guide/SKILL.md"
         },
-        "canvas-design": {
-            "category": "visual_design",
-            "description": "Create posters and visual assets in PNG/PDF.",
-            "intent_keywords": [
-                "canvas",
-                "poster",
-                "visual design"
-            ],
-            "skill_path": ".agent/skills/canvas-design/SKILL.md"
+        "1.3": {
+            "id": "session-managing",
+            "name": "1.3 Session Managing",
+            "category": "1-dev",
+            "description": "自动触发的会话生命周期管理 - INHERIT (继承知识) + DEPOSIT (沉淀精华)",
+            "skill_path": ".agent/skills/1-dev/session-managing/SKILL.md",
+            "auto_trigger": true
         },
-        "theme-factory": {
-            "category": "visual_design",
-            "description": "Apply preset themes (Midnight, Aurora) to artifacts.",
-            "intent_keywords": [
-                "theme",
-                "palette",
-                "styling"
-            ],
-            "skill_path": ".agent/skills/theme-factory/SKILL.md"
+        "2.1": {
+            "id": "code-auditing",
+            "name": "2.1 Code Auditing",
+            "category": "2-audit",
+            "description": "系统化审计与代码优化 - Code Review / Simplifier / Council / Performance。",
+            "skill_path": ".agent/skills/2-audit/code-auditing/SKILL.md"
         },
-        "docx": {
-            "category": "document_engineering",
-            "description": "Professional Word document engineering.",
-            "intent_keywords": [
-                "docx",
-                "word",
-                "tracked changes"
-            ],
-            "skill_path": ".agent/skills/docx/SKILL.md"
+        "2.2": {
+            "id": "scientific-debugging",
+            "name": "2.2 Scientific Debugging",
+            "category": "2-audit",
+            "description": "科学调试专家 - 观察(Observe) -> 假设(Hypothesize) -> 实验(Experiment) -> 修复(Fix)",
+            "skill_path": ".agent/skills/2-audit/scientific-debugging/SKILL.md"
         },
-        "pdf": {
-            "category": "document_engineering",
-            "description": "Heavy PDF processing (forms, merge, render).",
-            "intent_keywords": [
-                "pdf",
-                "forms",
-                "merge pdf"
-            ],
-            "skill_path": ".agent/skills/pdf/SKILL.md"
+        "2.3": {
+            "id": "webapp-testing",
+            "name": "2.3 Webapp Testing",
+            "category": "2-audit",
+            "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+            "skill_path": ".agent/skills/2-audit/webapp-testing/SKILL.md"
         },
-        "pptx": {
-            "category": "document_engineering",
-            "description": "PowerPoint presentation engineering.",
-            "intent_keywords": [
-                "pptx",
-                "slides",
-                "presentation"
-            ],
-            "skill_path": ".agent/skills/pptx/SKILL.md"
+        "3.1": {
+            "id": "ecosystem-managing",
+            "name": "3.1 Ecosystem Managing",
+            "category": "3-sys",
+            "description": "系统生态工程师 - 发布(Release) | 维护(Maintain) | 清理(Purge)",
+            "skill_path": ".agent/skills/3-sys/ecosystem-managing/SKILL.md"
         },
-        "xlsx": {
-            "category": "document_engineering",
-            "description": "Spreadsheet analysis and creation.",
-            "intent_keywords": [
-                "xlsx",
-                "excel",
-                "spreadsheet"
-            ],
-            "skill_path": ".agent/skills/xlsx/SKILL.md"
+        "3.2": {
+            "id": "skills-managing",
+            "name": "3.2 Skills Managing",
+            "category": "3-sys",
+            "description": "Create and manage ASE skills following best practices. Use when creating new skills, modifying skill-rules.json, understanding trigger patterns, working with hooks, debugging skill activation, or implementing progressive disclosure.",
+            "skill_path": ".agent/skills/3-sys/skills-managing/SKILL.md"
         },
-        "doc-coauthoring": {
-            "category": "document_engineering",
-            "description": "Structured workflow for co-authoring long documents.",
-            "intent_keywords": [
-                "coauthoring",
-                "technical spec",
-                "proposal"
-            ],
-            "skill_path": ".agent/skills/doc-coauthoring/SKILL.md"
+        "3.3": {
+            "id": "doc-bootstrapping",
+            "name": "3.3 Doc Bootstrapping",
+            "category": "3-sys",
+            "description": "一键建立项目文档系统。初始化 Rule1, Memory 以及基于 Diátaxis 的目录结构。",
+            "skill_path": ".agent/skills/3-sys/doc-bootstrapping/SKILL.md"
         },
-        "documentation-engineering": {
-            "category": "document_engineering",
-            "description": "Diátaxis framework documentation.",
-            "intent_keywords": [
-                "docs",
-                "readme",
-                "diataxis"
-            ],
-            "skill_path": ".agent/skills/documentation-engineering/SKILL.md",
-            "required_resources": [
-                ".agent/skills/documentation-engineering/resources/diataxis.md"
-            ]
+        "3.4": {
+            "id": "mcp-building",
+            "name": "3.4 MCP Building",
+            "category": "3-sys",
+            "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools.",
+            "skill_path": ".agent/skills/3-sys/mcp-building/SKILL.md"
         },
-        "backend-dev-guidelines": {
-            "category": "fullstack_dev",
-            "description": "Node.js/Express/TS backend best practices.",
-            "intent_keywords": [
-                "backend",
-                "express",
-                "prisma",
-                "zod"
-            ],
-            "skill_path": ".agent/skills/backend-dev-guidelines/SKILL.md"
+        "4.1": {
+            "id": "doc-writing",
+            "name": "4.1 Doc Writing",
+            "category": "4-tools",
+            "description": "技术文档工程 - Diátaxis框架 / PDF / DOCX / XLSX / PPTX 处理。Create, maintain, and structure clear technical documentation.",
+            "skill_path": ".agent/skills/4-tools/doc-writing/SKILL.md"
         },
-        "frontend-dev-guidelines": {
-            "category": "fullstack_dev",
-            "description": "React/TS frontend best practices.",
-            "intent_keywords": [
-                "react",
-                "frontend guidelines",
-                "typescript"
-            ],
-            "skill_path": ".agent/skills/frontend-dev-guidelines/SKILL.md"
+        "4.2": {
+            "id": "visual-designing",
+            "name": "4.2 Visual Designing",
+            "category": "4-tools",
+            "description": "视觉设计工具箱 - Canvas / Themes / Design System / Artifacts。The unified Visual Design Engine for Antigravity.",
+            "skill_path": ".agent/skills/4-tools/visual-designing/SKILL.md"
         },
-        "system-architecture-design": {
-            "category": "fullstack_dev",
-            "description": "Architecture patterns (Indie vs Enterprise).",
-            "intent_keywords": [
-                "architecture",
-                "c4",
-                "system design"
-            ],
-            "skill_path": ".agent/skills/system-architecture-design/SKILL.md"
+        "4.3": {
+            "id": "pptx-creating",
+            "name": "4.3 PPTX Creating",
+            "category": "4-tools",
+            "description": "PPTX 演示文稿创建、编辑与分析。支持从零创建(html2pptx)、编辑现有内容(OOXML)、使用模板创建。Triggers on 'ppt', 'pptx', 'powerpoint', 'presentation', 'slide', '幻灯片', '演示文稿'.",
+            "skill_path": ".agent/skills/4-tools/pptx-creating/SKILL.md"
         },
-        "mcp-builder": {
-            "category": "fullstack_dev",
-            "description": "Build MCP protocol servers.",
-            "intent_keywords": [
-                "mcp",
-                "protocol",
-                "server"
-            ],
-            "skill_path": ".agent/skills/mcp-builder/SKILL.md"
+        "E.1": {
+            "id": "brand-guidelines",
+            "name": "E.1 Brand Guidelines",
+            "category": "external",
+            "description": "Applies The Agent's official brand colors and typography to any sort of artifact that may benefit from having The Agent's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+            "skill_path": ".agent/skills/external/brand-guidelines/SKILL.md"
         },
-        "webapp-testing": {
-            "category": "fullstack_dev",
-            "description": "Playwright testing and UI debugging.",
-            "intent_keywords": [
-                "testing",
-                "playwright",
-                "debug ui"
-            ],
-            "skill_path": ".agent/skills/webapp-testing/SKILL.md"
+        "E.2": {
+            "id": "internal-comms",
+            "name": "E.2 Internal Comms",
+            "category": "external",
+            "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. The Agent should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+            "skill_path": ".agent/skills/external/internal-comms/SKILL.md"
         },
-        "artifacts-builder": {
-            "category": "fullstack_dev",
-            "description": "Multi-component React artifacts (shadcn/ui).",
-            "intent_keywords": [
-                "shadcn",
-                "react artifact",
-                "bundle"
-            ],
-            "skill_path": ".agent/skills/artifacts-builder/SKILL.md"
-        },
-        "performance-optimization": {
-            "category": "fullstack_dev",
-            "description": "Web Vitals and latency optimization.",
-            "intent_keywords": [
-                "performance",
-                "speed",
-                "optimization"
-            ],
-            "skill_path": ".agent/skills/performance-optimization/SKILL.md"
-        },
-        "intelligent-code-review": {
-            "category": "analysis_review",
-            "description": "Multi-persona AI code reviewer (Errors, Types, Tests).",
-            "intent_keywords": [
-                "review",
-                "code review",
-                "refactor",
-                "debug"
-            ],
-            "skill_path": ".agent/skills/intelligent-code-review/SKILL.md",
-            "required_resources": [
-                ".agent/skills/intelligent-code-review/resources/personas/silent-failure-hunter.md",
-                ".agent/skills/intelligent-code-review/resources/personas/type-architect.md"
-            ]
-        },
-        "systematic-debugging": {
-            "category": "analysis_review",
-            "description": "Scientific debugging protocol.",
-            "intent_keywords": [
-                "debug",
-                "fix",
-                "root cause"
-            ],
-            "skill_path": ".agent/skills/systematic-debugging/SKILL.md"
-        },
-        "meeting-insights-analyzer": {
-            "category": "analysis_review",
-            "description": "Analyze meeting transcripts for patterns.",
-            "intent_keywords": [
-                "meeting",
-                "transcript",
-                "insights"
-            ],
-            "skill_path": ".agent/skills/meeting-insights-analyzer/SKILL.md"
-        },
-        "skill-creator": {
-            "category": "system_evolution",
-            "description": "Create and manage ASE skills.",
-            "intent_keywords": [
-                "new skill",
-                "skill creator",
-                "meta"
-            ],
-            "skill_path": ".agent/skills/skill-creator/SKILL.md"
-        },
-        "product-requirements-mastery": {
-            "category": "system_evolution",
-            "description": "PRD generation and User Story Mapping.",
-            "intent_keywords": [
-                "prd",
-                "requirements",
-                "spec"
-            ],
-            "skill_path": ".agent/skills/product-requirements-mastery/SKILL.md"
-        },
-        "writing-plans": {
-            "category": "system_evolution",
-            "description": "Write implementation plans before coding.",
-            "intent_keywords": [
-                "plan",
-                "implementation",
-                "tdd"
-            ],
-            "skill_path": ".agent/skills/writing-plans/SKILL.md"
-        },
-        "internal-comms": {
-            "category": "system_evolution",
-            "description": "Write internal status reports and comms.",
-            "intent_keywords": [
-                "comms",
-                "status report",
-                "update"
-            ],
-            "skill_path": ".agent/skills/internal-comms/SKILL.md"
-        },
-        "brainstorming": {
-            "category": "system_evolution",
-            "description": "Explore design and intent before building.",
-            "intent_keywords": [
-                "brainstorm",
-                "ideation",
-                "explore"
-            ],
-            "skill_path": ".agent/skills/brainstorming/SKILL.md"
+        "E.3": {
+            "id": "meeting-insights-analyzer",
+            "name": "E.3 Meeting Insights",
+            "category": "external",
+            "description": "Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights, and actionable feedback. Identifies when you avoid conflict, use filler words, dominate conversations, or miss opportunities to listen. Perfect for professionals seeking to improve their communication and leadership skills.",
+            "skill_path": ".agent/skills/external/meeting-insights-analyzer/SKILL.md"
         }
     }
 }
